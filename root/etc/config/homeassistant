@@ -1,0 +1,4 @@
+
+config homeassistant 'sample_config'
+	option enabled '0'
+
