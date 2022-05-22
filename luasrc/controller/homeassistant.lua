@@ -18,7 +18,7 @@ end
 
 function act_status()
 local e={}
-  e.running=luci.sys.call("ps | grep 'hass' | grep -v 'hass-configurator' | grep -v 'grep' |  cut -d' ' -f2 > /dev/null")==0
+  e.running=luci.sys.call("pgrep -x hass > /dev/null")==0
   luci.http.prepare_content("application/json")
   luci.http.write_json(e)
 end
