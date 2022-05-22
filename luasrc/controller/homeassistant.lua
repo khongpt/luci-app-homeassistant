@@ -7,7 +7,7 @@ end
 
 entry({"admin","system"}, firstchild(), "system", 45).dependent = false
 
-entry({"admin", "system", "homeassistant"},firstchild(), _("Homeassistant")).dependent = false
+entry({"admin", "system", "homeassistant"},firstchild(), _("Home Assistant")).dependent = false
 
 entry({"admin", "system", "homeassistant", "general"},cbi("homeassistant/settings"), _("Base Setting"), 1)
 entry({"admin", "system", "homeassistant", "log"},form("homeassistant/info"), _("home-assistant.log"), 2)
