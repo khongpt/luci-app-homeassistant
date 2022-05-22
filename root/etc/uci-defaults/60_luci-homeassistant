@@ -4,11 +4,10 @@ uci -q batch <<-EOF >/dev/null
 	delete ucitrack.@homeassistant[-1]
 	add ucitrack homeassistant
 	set ucitrack.@homeassistant[-1].init=homeassistant
-	set ucitrack.@homeassistant[-1].affects=hass-configurator
 	commit ucitrack
 EOF
 
 rm -f /tmp/luci-indexcache
 chmod 755 /etc/init.d/homeassistant
-chmod 755 /etc/init.d/hass-configurator
+
 exit 0
